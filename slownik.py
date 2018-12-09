@@ -25,4 +25,17 @@ for a in range(len(koszyk)):
     print(koszyk[a]['cena'])
     suma = suma + float(koszyk[a]['cena'])
 
-print(str(suma))
+print('suma powyzszych to ' + str(suma))
+# mleko i ser 10% znizkiz flagami
+stan_reguly =   {'mleko': False, 'ser': False}
+suma=0
+for a in koszyk:
+    suma = suma + float(a['cena'])
+    nazwa_prod = a['nazwa']
+    if nazwa_prod == 'mleko' or nazwa_prod == 'ser':
+        stan_reguly[nazwa_prod] = True
+
+if stan_reguly['mleko'] or stan_reguly['ser']:
+    print('10% znizki')
+    suma = suma - (suma*0.10)
+print(suma)
