@@ -25,5 +25,9 @@ if dzien.startswith('So'):
     print('Promocja sobotnia 20%! ')
     cena_normalna= cena_normalna-cena_normalna*0.2
     print('Bilet w promocji: ' + str(cena_normalna))
+elif dzien.startswith('N'):
+    print('Promocja sobotnia 30%! ')
+    cena_normalna= cena_normalna-cena_normalna*0.3
+    print('Bilet w promocji: ' + str(cena_normalna))
 else:
-    print('Bilety w cenie standard - dzis nie Sobota')
+    print('Bilety w cenie standard - dzis nie Sobota ani Niedziela')
