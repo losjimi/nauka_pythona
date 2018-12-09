@@ -17,20 +17,20 @@ print('')
 print('')
 # lista ktorej elementami jest slownik
 
-koszyk = [  {'nazwa': 'mleko','cena': '5.20'},
-            {'nazwa': 'bulka', 'cena': '0.20'},
-            {'nazwa': 'ziemniaki', 'cena': '1.60'}]
+koszyk = [  {'nazwa': 'mleko','cena': 5.20},
+            {'nazwa': 'bulka', 'cena': 0.20},
+            {'nazwa': 'ziemniaki', 'cena': 1.60}]
 suma=0
 for a in range(len(koszyk)):
     print(koszyk[a]['cena'])
-    suma = suma + float(koszyk[a]['cena'])
+    suma = suma + koszyk[a]['cena']
 
 print('suma powyzszych to ' + str(suma))
 # mleko i ser 10% znizkiz flagami
 stan_reguly =   {'mleko': False, 'bulka': False}
 suma=0
 for a in koszyk:
-    suma = suma + float(a['cena'])
+    suma = suma + a['cena']
     nazwa_prod = a['nazwa']
     if nazwa_prod == 'mleko' or nazwa_prod == 'bulka':
         stan_reguly[nazwa_prod] = True
