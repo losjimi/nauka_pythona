@@ -39,3 +39,14 @@ if stan_reguly['mleko'] and stan_reguly['bulka']:
     print('10% znizki')
     suma = suma - (suma*0.10)
 print(suma)
+
+# zad 14
+produkty ={ 'S123444': 'sukienka trojkatna',
+            'P123': 'spodnei krata',
+            'X1221': 'kosola'}
+igla = 'X2X'
+
+if igla in produkty:
+    print('Znalazlem {0}'.format(igla))
+else:
+    print('Brak w magazynie {0}'.format(igla))
